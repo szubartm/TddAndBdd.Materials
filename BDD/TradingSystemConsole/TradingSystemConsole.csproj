@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <OutputPath>..\bin\</OutputPath>
+  </PropertyGroup>
+<ItemGroup>
+    <ProjectReference Include="..\TradingSystem\TradingSystem.csproj" />
+    <ProjectReference Include="..\OrderManagementSystem\OrderManagementSystem.csproj" />
+    <ProjectReference Include="..\DataProviderSystem\DataProviderSystem.csproj" />
+    <ProjectReference Include="..\Common\Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Mono.Options" Version="6.6.0.161" />
+  </ItemGroup>
+</Project>

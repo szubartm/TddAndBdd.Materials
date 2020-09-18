@@ -10,7 +10,12 @@ namespace Behavioral.Steps
     [Binding]
     public class OrderAssertionsSteps
     {
+        private readonly ScenarioHelper _scenarioHelper;
 
+        public OrderAssertionsSteps(ScenarioHelper scenarioHelper)
+        {
+            _scenarioHelper = scenarioHelper;
+        }
         [Given(@"order is accepted")]
         [When(@"order is accepted")]
         [Then(@"order is accepted")]
@@ -19,7 +24,7 @@ namespace Behavioral.Steps
         [Then(@"zlecenie zostało zaakceptowane")]
         public async Task OrderIsAccepted()
         {
-            var order = await Hooks.Hooks.SimulationContext.OrderManagementSystemSimulator.GetById(ScenarioHelper.Instance.OrderId);
+            var order = await Hooks.Hooks.SimulationContext.OrderManagementSystemSimulator.GetById(_scenarioHelper.OrderId);
             Assert.IsNotNull(order);
             Assert.IsTrue(order.State == State.LIVE);
         }
@@ -28,7 +33,7 @@ namespace Behavioral.Steps
         [Then(@"zlecenie zostało odrzucone")]
         public async Task OrderIsRejected()
         {
-            var order = await Hooks.Hooks.SimulationContext.OrderManagementSystemSimulator.GetById(ScenarioHelper.Instance.OrderId);
+            var order = await Hooks.Hooks.SimulationContext.OrderManagementSystemSimulator.GetById(_scenarioHelper.OrderId);
             Assert.IsNotNull(order);
             Assert.IsTrue(order.State == State.REJECTED);
         }
@@ -36,7 +41,7 @@ namespace Behavioral.Steps
         [Then(@"order is in filled state")]
         public async Task OrderIsInFilledState()
         {
-            var order = await Hooks.Hooks.SimulationContext.OrderManagementSystemSimulator.GetById(ScenarioHelper.Instance.OrderId); 
+            var order = await Hooks.Hooks.SimulationContext.OrderManagementSystemSimulator.GetById(_scenarioHelper.OrderId); 
             Assert.IsNotNull(order);
             Assert.IsTrue(order.State == State.FILLED);
         }
@@ -45,21 +50,21 @@ namespace Behavioral.Steps
         [Then(@"podzlecenie zostało wysłane")]
         public async Task ChildOrderWasSent()
         {
-            var child = await ScenarioHelper.Instance.GetLastChild();
-            Assert.IsTrue(child.ParentOrderId == ScenarioHelper.Instance.OrderId);
+            var child = await _scenarioHelper.GetLastChild();
+            Assert.IsTrue(child.ParentOrderId == _scenarioHelper.OrderId);
         }
 
         [Then(@"child order should not be sent")]
         public async Task ChildOrderShouldNotBeSent()
         {
-            var childCount = (await Hooks.Hooks.SimulationContext.OrderManagementSystemSimulator.GetAllChilds(ScenarioHelper.Instance.OrderId)).Count();
-            Assert.True(childCount == ScenarioHelper.Instance.ChildOrders.Count());
+            var childCount = (await Hooks.Hooks.SimulationContext.OrderManagementSystemSimulator.GetAllChilds(_scenarioHelper.OrderId)).Count();
+            Assert.True(childCount == _scenarioHelper.ChildOrders.Count());
         }
 
         [Then(@"child order is cancelled")]
         public async Task ChildOrderIsCancelled()
         {
-            var child = await ScenarioHelper.Instance.GetLastChild();
+            var child = await _scenarioHelper.GetLastChild();
             Assert.True(child.CancelState == State.PCANCEL);
             await Hooks.Hooks.SimulationContext.OrderManagementSystemSimulator.Acknowledge(child.Id);
         }

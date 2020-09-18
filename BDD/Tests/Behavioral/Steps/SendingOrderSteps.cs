@@ -10,6 +10,12 @@ namespace Behavioral.Steps
     [Binding]
     public class SendingOrderSteps
     {
+        private readonly ScenarioHelper _scenarioHelper;
+
+        public SendingOrderSteps(ScenarioHelper scenarioHelper)
+        {
+            _scenarioHelper = scenarioHelper;
+        }
         [Given(@"new order is received")]
         [When(@"new order is received")]
         [When(@"nowe zlecenie zostało otrzymane")]
@@ -17,7 +23,7 @@ namespace Behavioral.Steps
 
         private async Task InsertOrder(StrategyTypes strategyType)
         {
-            ScenarioHelper.Instance.OrderId = await Hooks.Hooks.SimulationContext.OrderManagementSystemSimulator.Insert("AZN.L", Side.Buy, 100, 10000,
+            _scenarioHelper.OrderId = await Hooks.Hooks.SimulationContext.OrderManagementSystemSimulator.Insert("AZN.L", Side.Buy, 100, 10000,
                 TimeInForce.Day, null, strategyType);
         }
 
@@ -27,7 +33,7 @@ namespace Behavioral.Steps
         public async Task NewOrderIsReceivedWithParams(Table table)
         {
             var order = table.CreateInstance<Order>();
-            ScenarioHelper.Instance.OrderId = await Hooks.Hooks.SimulationContext.OrderManagementSystemSimulator.Insert(order.Symbol, order.Side, order.Price,order.Quantity,
+            _scenarioHelper.OrderId = await Hooks.Hooks.SimulationContext.OrderManagementSystemSimulator.Insert(order.Symbol, order.Side, order.Price, order.Quantity,
                 order.TimeInForce, order.ParentOrderId, order.StrategyType);
         }
 

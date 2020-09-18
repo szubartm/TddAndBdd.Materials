@@ -9,7 +9,6 @@ namespace Behavioral.Tools.ScenarioHelpers
 {
     public class ScenarioHelper
     {
-        public static ScenarioHelper Instance = new ScenarioHelper();
         public string OrderId { get; set; }
         public IEnumerable<IOrder> ChildOrders { get;  set; } = new List<IOrder>();
         public async Task<IOrder> GetLastChild()

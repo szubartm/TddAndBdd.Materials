@@ -13,6 +13,12 @@ namespace Behavioral.Hooks
     [Binding]
     public class Hooks
     {
+        private readonly ScenarioHelper _scenarioHelper;
+
+        public Hooks(ScenarioHelper scenarioHelper)
+        {
+            _scenarioHelper = scenarioHelper;
+        }
         private static SutLifetimeController _sutLifetimeController;
          
         public static SimulationContext SimulationContext { get; private set; }
@@ -29,11 +35,11 @@ namespace Behavioral.Hooks
         }
 
         [AfterScenario()]
-        public static async Task AfterScenario()
+        public async Task AfterScenario()
         {
             await SimulationContext.MarketDataServiceSimulator.ClearMarketData();
-            ScenarioHelper.Instance.ChildOrders = new List<IOrder>();
-            ScenarioHelper.Instance.OrderId = null;
+            _scenarioHelper.ChildOrders = new List<IOrder>();
+            _scenarioHelper.OrderId = null;
         }
 
         [AfterTestRun]

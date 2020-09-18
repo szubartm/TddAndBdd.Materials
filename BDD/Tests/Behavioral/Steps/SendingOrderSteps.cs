@@ -12,6 +12,7 @@ namespace Behavioral.Steps
     {
         [Given(@"new order is received")]
         [When(@"new order is received")]
+        [When(@"nowe zlecenie zostało otrzymane")]
         public Task NewOrderIsReceived() => InsertOrder(StrategyTypes.Day);
 
         private async Task InsertOrder(StrategyTypes strategyType)
@@ -22,6 +23,7 @@ namespace Behavioral.Steps
 
         [Given(@"new order is received with params")]
         [When(@"new order is received with params")]
+        [When(@"nowe zlecenie zostało otrzymane z parametrami")]
         public async Task NewOrderIsReceivedWithParams(Table table)
         {
             var order = table.CreateInstance<Order>();

@@ -10,6 +10,9 @@ namespace Behavioral.Steps
         [Given(@"it is (.*)")]
         [When(@"it is (.*)")]
         [Then(@"it is (.*)")]
+        [Given(@"że jest (.*)")]
+        [When(@"jest (.*)")]
+        [Then(@"jest (.*)")]
         public async Task ItIs(string hour)
         {
             var time = TimeSpan.Parse(hour);

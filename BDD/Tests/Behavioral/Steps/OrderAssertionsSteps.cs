@@ -14,6 +14,9 @@ namespace Behavioral.Steps
         [Given(@"order is accepted")]
         [When(@"order is accepted")]
         [Then(@"order is accepted")]
+        [Given(@"zlecenie zostało zaakceptowane")]
+        [When(@"zlecenie zostało zaakceptowane")]
+        [Then(@"zlecenie zostało zaakceptowane")]
         public async Task OrderIsAccepted()
         {
             var order = await Hooks.Hooks.SimulationContext.OrderManagementSystemSimulator.GetById(ScenarioHelper.Instance.OrderId);
@@ -22,6 +25,7 @@ namespace Behavioral.Steps
         }
 
         [Then(@"order is rejected")]
+        [Then(@"zlecenie zostało odrzucone")]
         public async Task OrderIsRejected()
         {
             var order = await Hooks.Hooks.SimulationContext.OrderManagementSystemSimulator.GetById(ScenarioHelper.Instance.OrderId);
@@ -38,6 +42,7 @@ namespace Behavioral.Steps
         }
 
         [Then(@"child order was sent")]
+        [Then(@"podzlecenie zostało wysłane")]
         public async Task ChildOrderWasSent()
         {
             var child = await ScenarioHelper.Instance.GetLastChild();

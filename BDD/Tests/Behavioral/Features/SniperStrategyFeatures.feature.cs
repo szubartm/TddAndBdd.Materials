@@ -143,26 +143,26 @@ this.ScenarioInitialize(scenarioInfo);
 #line 10
  testRunner.Given("it is 8:00", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
                             "Field",
                             "Value"});
-                table9.AddRow(new string[] {
+                table10.AddRow(new string[] {
                             "Symbol",
                             "AZN.L"});
-                table9.AddRow(new string[] {
+                table10.AddRow(new string[] {
                             "Side",
                             "Buy"});
-                table9.AddRow(new string[] {
+                table10.AddRow(new string[] {
                             "Price",
                             "100"});
-                table9.AddRow(new string[] {
+                table10.AddRow(new string[] {
                             "Quantity",
                             "100000"});
-                table9.AddRow(new string[] {
+                table10.AddRow(new string[] {
                             "StrategyType",
                             "Sniper"});
 #line 11
- testRunner.When("new order is received with params", ((string)(null)), table9, "When ");
+ testRunner.When("new order is received with params", ((string)(null)), table10, "When ");
 #line hidden
 #line 18
  testRunner.Then("order is rejected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -201,26 +201,26 @@ this.ScenarioInitialize(scenarioInfo);
 #line 21
  testRunner.Given("it is 8:00", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
                             "Field",
                             "Value"});
-                table10.AddRow(new string[] {
+                table11.AddRow(new string[] {
                             "Symbol",
                             "AZN.L"});
-                table10.AddRow(new string[] {
+                table11.AddRow(new string[] {
                             "Side",
                             "Buy"});
-                table10.AddRow(new string[] {
+                table11.AddRow(new string[] {
                             "Price",
                             "1"});
-                table10.AddRow(new string[] {
+                table11.AddRow(new string[] {
                             "Quantity",
                             "1000"});
-                table10.AddRow(new string[] {
+                table11.AddRow(new string[] {
                             "StrategyType",
                             "Sniper"});
 #line 22
- testRunner.When("new order is received with params", ((string)(null)), table10, "When ");
+ testRunner.When("new order is received with params", ((string)(null)), table11, "When ");
 #line hidden
 #line 29
  testRunner.Then("order is rejected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

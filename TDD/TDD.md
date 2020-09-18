@@ -196,8 +196,44 @@ Cechy testów
 -   Niezależność od innych elementów wewnętrznych/zewnętrznych -- to co
     potrzebujemy możemy mockować itp.
 
-Dobre i złe praktyki
-====================
+Złe praktyki kodowania w kontekście testowalności kodu
+======================================================
+
+-   Korzystanie ze statycznych klas, metod, pól, singletonów
+   
+    -   testy mogą wpływać wzajemnie na wynik, mniejsza elastyczność, trudniej napisać test
+   
+    -   brak izolacji
+
+-   Zależność od stanu globlanego - typu od czegoś w bazie danych, od jakiegoś zdarzenia w systemie, od danych otrzymanych z innego systemu
+		
+-   Tworzenie innych klas w konstruktorze i metodach, bez możliwości wstrzyknięcia zależności
+
+    -   znaki ostrzegawcze:
+        -   operator new	
+		-   wywołania statycznych metod
+		-   cokolwiek ponad przypisywanie wartości do pól klasy
+		-   niepełna inicjalizacja - tj. żeby obiekt był w pełni funkcjonalny musimy coś jeszcze zrobić (np. wywołać init)
+		-   instrukcje warunkowe
+		-   tworzenie konstruktora specjalnie na potrzeby testów
+
+-   Klasy/metody, które co prawda przyjmują dependencje jako parametr, ale nie można jej zamockować a jest trudna w utworzeniu
+
+-   Metody, które robią "za dużo"
+
+    -   wiele rozgałęzień w ramach metody
+   
+    -   im więcej odpowiedzialności tym więcej kombinacji do przetestowania, testy robią się dłuższe, mniej czytelne, więcej do mockowania
+
+-   Metody, których zachowanie zależy (a nie można przekazac tego jako argument, nie jest też to generowane przez jakąś dependencję, którą możemy sterować w teście) od: czasu (DateTime.Now, upływ czasu), wartości losowe
+
+-   Kod, który modyfikuje jakiś stan globalny - typu zapisuje coś w bazie danych
+
+-   Kod ze "skutkami ubocznymi" - wysyła coś do innego systemu, wysyła maile
+
+
+Dobre i złe praktyki w pisaniu testów
+=====================================
 
 -   Nie powinniśmy łamać granic enkapsulacji tylko i wyłącznie na
     potrzeby testów. Jeśli musimy coś takiego zrobić to albo mamy coś
@@ -518,6 +554,12 @@ Jak testować statyczne metody/klasy?
 Jak testować metody prywatne?
 -----------------------------
 
+Czy powinniśmy testować wywołania Thread.Sleep, Task.Delay?
+-----------------------------------------------------------
+
+Jak testować metody, które korzystają z HttpClient?
+---------------------------------------------------
+
 Linki do materiałów
 
 [https://github.com/unicodeveloper/awesome-tdd\#tdd-in-C\#](https://github.com/unicodeveloper/awesome-tdd#tdd-in-C)
@@ -535,3 +577,7 @@ Linki do materiałów
 <https://devstyle.pl/2020/06/25/mega-pigula-wiedzy-o-testach-jednostkowych/>
 
 <https://devstyle.pl/2013/04/22/testy-jednostkowe-materialy-do-nauki/>
+
+<https://dzone.com/articles/5-easy-ways-to-write-hard-to-testcode/>
+
+<https://www.toptal.com/qa/how-to-write-testable-code-and-why-it-matters/>

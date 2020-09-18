@@ -37,8 +37,9 @@ namespace Behavioral.Steps
                 order.TimeInForce, order.ParentOrderId, order.StrategyType);
         }
 
-        [Given(@"new sniper order is received")]
-        [When(@"new sniper order is received")]
+        [Scope(Feature = "SniperStrategyFeatures")]
+        [Given(@"new order is received")]
+        [When(@"new order is received")]
         public Task NewSniperOrderIsReceived()
             => InsertOrder(StrategyTypes.Sniper);
 

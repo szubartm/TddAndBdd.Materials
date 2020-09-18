@@ -257,7 +257,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 32
- testRunner.Given("new sniper order is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("new order is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 33
  testRunner.And("order is accepted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -303,7 +303,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("it is 8:00", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 39
- testRunner.When("new sniper order is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("new order is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 40
  testRunner.And("order is accepted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -346,7 +346,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("it is 8:00", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 45
- testRunner.And("new sniper order is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("new order is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 46
  testRunner.And("order is accepted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -389,7 +389,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 51
- testRunner.Given("new sniper order is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("new order is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 52
  testRunner.And("order is accepted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

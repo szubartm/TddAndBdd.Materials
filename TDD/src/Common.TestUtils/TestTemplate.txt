@@ -1,0 +1,30 @@
+﻿[TestFixture]
+class $Class$_When$Reason$
+    : ContextTest<$Class$>
+{
+    Exception _exception;
+
+    protected override $Class$ Arrange()
+    {
+        return new $Class$();
+    }
+
+    protected override void Act()
+    {
+        _exception = Trying(() => _result = ObjectUnderTest.$Method$());
+    }
+
+    [Test]
+    public void ShouldNotThrowAnyException()
+    {
+        _exception.ShouldBeNull();
+    }
+
+    [Test]
+    public void ShouldReturnCorrectResult()
+    {
+        _result.ShouldNotBeNull();
+        
+		Finish_me
+    }
+}

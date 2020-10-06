@@ -6,7 +6,7 @@ namespace UnitTesting.StaticMethod
     {
         public static string ProcessRequest(string id, string request)
         {
-            Thread.Sleep(10*1000);
+            Thread.Sleep(5*1000);
             return "blah-blah-blah";
         }
     }

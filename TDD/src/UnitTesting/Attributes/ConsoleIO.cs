@@ -68,7 +68,7 @@ namespace Nemesis.Education.TestInfrastructure
         public void Output_RegEx() => Console.Write(@"ABC123456");
 
         [Test, ConsoleOutputRegex(@"A\w{1,2}1\d{4}6")]
-        public void Output_RegExPartial() => Console.Write(@"dupa_ABC123456_dupa");
+        public void Output_RegExPartial() => Console.Write(@"XXX_ABC123456_XXX");
 
 
         private static readonly string _pattern = /*language=regexp|jsregexp*/@"^A\w{1,2}1\d{4}99$";

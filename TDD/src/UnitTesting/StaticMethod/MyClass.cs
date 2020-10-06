@@ -33,12 +33,8 @@ namespace UnitTesting.StaticMethod
     #region refactor to dependency and control number of its instances by DI container
     class MyClass3
     {
-        readonly ISlowSystemFacade _slowSystemFacade;
-
-        public MyClass3( ISlowSystemFacade slowSystemFacade )
-        {
-            _slowSystemFacade = slowSystemFacade;
-        }
+        private readonly ISlowSystemFacade _slowSystemFacade;
+        public MyClass3(ISlowSystemFacade slowSystemFacade) => _slowSystemFacade = slowSystemFacade;
 
         public string GetValueFromOtherSystem(string request)
         {

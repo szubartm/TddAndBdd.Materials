@@ -13,9 +13,9 @@ namespace UnitTesting.StaticMethod
         {
             var objectUnderTest = new MyClass();
 
-            var response = objectUnderTest.GetValueFromOtherSystem("dupa");
+            var response = objectUnderTest.GetValueFromOtherSystem("abc");
 
-            Assert.That(response, Is.EqualTo("DUPA"));
+            Assert.That(response, Is.EqualTo("ABC"));
         }
     }
 
@@ -41,13 +41,13 @@ namespace UnitTesting.StaticMethod
                 return request + "123";
             };
 
-            var response1 = objectUnderTest.GetValueFromOtherSystem("dupa");
-            var response2 = objectUnderTest.GetValueFromOtherSystem("dupa");
+            var response1 = objectUnderTest.GetValueFromOtherSystem("abc");
+            var response2 = objectUnderTest.GetValueFromOtherSystem("abc");
 
              MyClass2.ProcessRequestSeam = _originalBehaviour;
 
-            Assert.That(response1, Is.EqualTo("DUPA123"));
-            Assert.That(response2, Is.EqualTo("DUPA123"));
+            Assert.That(response1, Is.EqualTo("ABC123"));
+            Assert.That(response2, Is.EqualTo("ABC123"));
 
             Assert.That(ids.Count,Is.EqualTo(2));
             Assert.That(ids.Distinct().Count() == 2);

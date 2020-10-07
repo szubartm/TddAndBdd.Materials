@@ -14,12 +14,12 @@ namespace UnitTesting.Naming
             var x = 10;
             var y = 0.5;
             var calculator = new Calculator();
-
+            
             //act
-            var result = calculator.Add(x, y);
+            var result = calculator.Add( x, y );
 
             //assert
-            Assert.That(result, Is.EqualTo(10.5));
+            Assert.That( result, Is.EqualTo( 10.5 ) );
         }
     }
 
@@ -38,18 +38,24 @@ namespace UnitTesting.Naming
             var objectUnderTest = new Calculator();
 
             //act
-            _result = objectUnderTest.Add(x, y);
+            _result = objectUnderTest.Add( x, y );
         }
 
         [Test]
-        public void ShouldProduceCorrectResult() => Assert.That(_result, Is.EqualTo(30.0));
+        public void ShouldProduceCorrectResult()
+        {
+            Assert.That( _result, Is.EqualTo( 30.0 ) );
+        }
 
         [Test]
-        public void WeCanHaveMultipleSeparatedTestsForResult() => Assert.Fail(); //really, can we???
+        public void WeCanHaveMultipleSeparatedTestsForResult()
+        {
+            Assert.Fail(); //really, can we???
+        }
     }
 
     [TestFixture]
-    public class Calculator_WhenTestingCommutativityUnderAddition
+    public class Calculator_WhenTestingCumitativenessForAdd
     {
         double _result1;
         double _result2;
@@ -75,7 +81,10 @@ namespace UnitTesting.Naming
         }
 
         [Test]
-        public void ShouldBothResultsBeEqual() => Assert.That(_result1, Is.EqualTo(_result2));
+        public void ShouldBothResultsBeEqual()
+        {
+            Assert.That( _result1, Is.EqualTo( _result2 ) );
+        }
     }
 
     //contextTest !!!

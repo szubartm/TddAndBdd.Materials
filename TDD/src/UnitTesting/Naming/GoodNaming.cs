@@ -1,5 +1,4 @@
 ﻿using System;
-
 using NUnit.Framework;
 
 namespace UnitTesting.Naming
@@ -10,14 +9,20 @@ namespace UnitTesting.Naming
         Calculator _objectUnderTest;
 
         [SetUp]
-        public void CreateCalculator() => _objectUnderTest = new Calculator();
+        public void CreateCalculator()
+        {
+            _objectUnderTest = new Calculator();
+        }
 
         [Test]
         //ERROR ?[ExpectedException( typeof ( ArgumentException ) )]
-        public void ShouldThrowExceptionForNegativeFirstParameter() => Assert.Throws<ArgumentException>(() => _objectUnderTest.Add(-1, 0));
+        public void ShouldThrowExceptionForNegativeFirstParameter()
+        {
+            Assert.Throws<ArgumentException>(() => _objectUnderTest.Add(-1, 0));
+        }
 
         [Test]
-        public void ShouldAdditionBeCommutativeForIntegers()
+        public void ShouldAdditionBeCumitativeForIntegers()
         {
             var x = 10;
             var y = 20;
@@ -29,6 +34,9 @@ namespace UnitTesting.Naming
 
         [TestCase(1, -0.1, ExpectedResult = 0.9)]
         [TestCase(5, 10, ExpectedResult = 15)]
-        public double Should_return_correct_values_for_example_data(int x, double y) => _objectUnderTest.Add(x, y);
+        public double Should_return_correct_values_for_example_data(int x, double y)
+        {
+            return _objectUnderTest.Add(x, y);
+        }
     }
 }

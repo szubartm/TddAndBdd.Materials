@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using Common.TestUtils;
+using Nemesis.Utils.Runtime;
 using NUnit.Framework;
+using Common.TestUtils;
 
-namespace UnitTesting.Stubs
+namespace Nemesis.Education.Tests
 {
     [IntegrationTest]
     [TestFixture("10:00:00", "10:00:15", TypeArgs = new[] { typeof(HighResolutionTickProvider) }, Description = "Real timer tests")]

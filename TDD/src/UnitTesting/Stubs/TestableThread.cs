@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Threading;
 using Moq;
+
 using NUnit.Framework;
 
-namespace UnitTesting.Stubs
+namespace Nemesis.Education.Threading
 {
     public class OldSchoolScheduler : IDisposable
     {

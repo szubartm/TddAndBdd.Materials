@@ -2,8 +2,8 @@
 using NUnit.Framework;
 using NUnit.Framework.Interfaces;
 
-//[assembly: Nemesis_Education.Tests.ConsoleAction("ASSEMBLY")]
-namespace Nemesis.Education.TestInfrastructure
+//[assembly: UnitTesting.Attributes.ConsoleAction("ASSEMBLY")]
+namespace UnitTesting.Attributes
 {
     [TestFixture]
     [ConsoleAction("CLASS")]

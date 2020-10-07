@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-
 using NUnit.Framework;
 
-namespace Nemesis.Education.TestInfrastructure
+namespace UnitTesting.Stubs
 {
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1001:TypesThatOwnDisposableFieldsShouldBeDisposable")]
     [TestFixture]

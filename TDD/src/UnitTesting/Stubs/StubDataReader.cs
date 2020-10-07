@@ -5,7 +5,7 @@ using System.Data;
 using System.Globalization;
 using System.Linq;
 
-namespace Nemesis.Education.TestInfrastructure
+namespace UnitTesting.Stubs
 {
     public sealed class StubDataReader : IDataReader
     {

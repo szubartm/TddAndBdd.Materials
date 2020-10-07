@@ -1,7 +1,7 @@
 ﻿using System;
 using NUnit.Framework;
 
-namespace Nemesis.Education.TestInfrastructure
+namespace UnitTesting.Attributes
 {
     public class SqrtTests
     {

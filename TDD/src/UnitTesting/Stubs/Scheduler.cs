@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
 
-namespace Nemesis.Utils.Runtime
+namespace UnitTesting.Stubs
 {
     public class Scheduler
     {

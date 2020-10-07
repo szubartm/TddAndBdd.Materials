@@ -2,13 +2,13 @@
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using JetBrains.Annotations;
 using NUnit.Framework;
 using NUnit.Framework.Interfaces;
 using NUnit.Framework.Internal;
 using NUnit.Framework.Internal.Commands;
-using JetBrains.Annotations;
 
-namespace Nemesis.Education.TestInfrastructure
+namespace UnitTesting.Attributes
 {
     [TestFixture]
     public class ConsoleInputAttributeTests

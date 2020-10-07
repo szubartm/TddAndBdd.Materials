@@ -6,7 +6,7 @@ using NUnit.Framework.Interfaces;
 using NUnit.Framework.Internal;
 using NUnit.Framework.Internal.Commands;
 
-namespace Nemesis.Education.TestInfrastructure
+namespace UnitTesting.Attributes
 {
     [TestFixture]
     public class ExpectedExceptionTests

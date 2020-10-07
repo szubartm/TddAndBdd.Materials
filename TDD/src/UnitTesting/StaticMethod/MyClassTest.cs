@@ -15,7 +15,7 @@ namespace UnitTesting.StaticMethod
 
             var response = objectUnderTest.GetValueFromOtherSystem("abc");
 
-            Assert.That(response, Is.EqualTo("ABC"));
+            Assert.That(response, Is.EqualTo("BLAH-BLAH-BLAH"));
         }
     }
 

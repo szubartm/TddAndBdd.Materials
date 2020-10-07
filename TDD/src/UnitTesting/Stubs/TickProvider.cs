@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Threading;
 
-namespace Nemesis.Utils.Runtime
+namespace UnitTesting.Stubs
 {
     public interface ITickProvider
     {

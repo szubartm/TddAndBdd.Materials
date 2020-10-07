@@ -1,7 +1,7 @@
 ﻿using System;
 using NUnit.Framework;
 
-namespace Nemesis.Education.TestInfrastructure
+namespace UnitTesting.Stubs
 {
     [TestFixture(1, "Ala", TypeArgs = new[] { typeof(NewOrderObject) })]
     //[TestFixture(new object[] { typeof(NewOrderObject), 1, "Ala"})]

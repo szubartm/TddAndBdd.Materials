@@ -5,7 +5,7 @@ using System.Text;
 using System.Xml.Serialization;
 using Common.TestUtils;
 
-namespace Nemesis.Utils.Testing
+namespace UnitTesting.Stubs
 {
     public class MockMethodProvider<TKey, TValue>
     {

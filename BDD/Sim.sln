@@ -21,7 +21,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Behavioral", "Tests\Behavio
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TradingSystemWebApi", "TradingSystemWebApi\TradingSystemWebApi.csproj", "{37C80D2F-B440-402F-9E54-2DDFC6DB4ECA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TradingSystemWebApiContract", "TradingSystemWebApiContract\TradingSystemWebApiContract.csproj", "{B932CD55-47EF-4DF5-B802-4EBB8D1D4FEE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TradingSystemWebApiContract", "TradingSystemWebApiContract\TradingSystemWebApiContract.csproj", "{B932CD55-47EF-4DF5-B802-4EBB8D1D4FEE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C2647C55-2523-452E-B26D-46B558BA2D65}"
+	ProjectSection(SolutionItems) = preProject
+		Scenarios_Doc.txt = Scenarios_Doc.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

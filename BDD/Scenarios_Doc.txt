@@ -1,0 +1,76 @@
+Przed uruchomieniem scenariuszy w appsettings.json trzeba ustawiæ odpowiedni¹ œcie¿kê sutFilePath.
+
+Komunikacja na potrzeby scenariuszy odbywa siê poprzez webapi trading systemu.
+
+TradingSystemConsole commands:
+ACKNOWLEDGE_ORDER
+  "id|Id=", "Id of tsOrder to be rejected",
+ 
+CANCEL_ORDER
+ "id|Id=", "Id of tsOrder to be cancelled",
+ 
+FILL_ORDER
+ "id|Id=", "Id of tsOrder to be rejected",
+ "q|Q|quantity|Quantity=", "Quantity",
+ 
+GET_ALL_ORDERS
+
+GET_CHILD_BY_PARENT_ID_ORDERS
+ "id|Id=", "Id of parent tsOrder"
+ 
+GET_ORDER_BY_ID
+ "id|Id=", "Id of tsOrder",
+ 
+INSERT_MARKET_DATA
+ "s|S|symbol|Symbol=", "Symbol",
+ "b|B|bid|Bid=", "Bid",
+ "a|A|ask|Ask=", "Ask",
+ "bs|BS|bidsize|BidSize=", "BidSize",
+ "as|AS|asksize|AskSize=", "AskSize",
+
+INSERT_ORDER
+ "sym|Sym|symbol|Symbol=", "Symbol",
+ "s|S|side|Side=", "Side",
+ "p|P|price|Price=", "Price",
+ "q|Q|quantity|Quantity=", "Quantity",
+ "tif|TIF|timeinforce|TimeInForce=", "TimeInForce",
+ "str|Str|strategy|Strategy=", "Strategy Name",
+ 
+REJECT_ORDER
+ "id|Id=", "Id of tsOrder to be rejected",
+
+SET_TIME
+ "t|T|time|Time=", "Time",
+
+UPDATE_ORDER
+ "id|Id=", "ClientOrder id",
+ "p|P|price|Price=", "New Price",
+ "q|Q|quantity|Quantity=", "new Quantity",
+ 
+UPDATE_TIME
+ "t|T|time|Time=", "Time",
+ 
+Side
+ Buy = 0,
+ Sell = 1 
+ 
+TimeInForce
+ Day = 1,
+ IOC = 2,
+ FOK = 3
+
+State
+ UNACK = 0,
+ LIVE = 1,
+ PMOD = 2,
+ PFILLED = 3,
+ FILLED = 4,
+ PCANCEL = 5,
+ CANCELLED = 6,
+ REJECTED = 7,
+ CLOSED = 8
+ 
+StrategyTypes
+ Day = 0,
+ Sniper = 1
+

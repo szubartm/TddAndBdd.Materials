@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Threading.Tasks;
 using Behavioral.Tools;
 using Behavioral.Tools.SeparateProcess;
@@ -30,6 +31,7 @@ namespace Behavioral.Hooks
                 .AddJsonFile("appsettings.json", true, true)
                 .Build();
             _sutLifetimeController = new SutLifetimeController();
+
             _sutLifetimeController.StartSut(config["sutFilePath"]);
             SimulationContext = new SimulationContext(config["sutWebApiUri"]);
         }

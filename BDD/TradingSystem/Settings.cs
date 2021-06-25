@@ -24,25 +24,25 @@ namespace TradingSystem
 
         public static int SystemId => 121;
 
-        //public static IEnumerable<ExchangeTradingSessionHours> TradingSessions = new List<ExchangeTradingSessionHours>()
-        //{
-        //    new ExchangeTradingSessionHours(TradingSessionType.MarketClosed, TimeSpan.Parse("00:00:00"), TimeSpan.Parse("7:00:00")),
-        //    new ExchangeTradingSessionHours(TradingSessionType.OpenAuction, TimeSpan.Parse("7:00:00"), TimeSpan.Parse("8:00:00")),
-        //    new ExchangeTradingSessionHours(TradingSessionType.ContinuesTrading, TimeSpan.Parse("8:00:00"), TimeSpan.Parse("12:00:00")),
-        //    new ExchangeTradingSessionHours(TradingSessionType.IntradayAuction, TimeSpan.Parse("12:00:00"), TimeSpan.Parse("12:05:00")),
-        //    new ExchangeTradingSessionHours(TradingSessionType.ContinuesTrading, TimeSpan.Parse("12:05:00"), TimeSpan.Parse("16:30:00")),
-        //    new ExchangeTradingSessionHours(TradingSessionType.IntradayAuction, TimeSpan.Parse("16:30:00"), TimeSpan.Parse("16:35:00")),
-        //    new ExchangeTradingSessionHours(TradingSessionType.MarketClosed, TimeSpan.Parse("16:35:00"), TimeSpan.Parse("24:00:00")),
-        //};
-
         public static IEnumerable<ExchangeTradingSessionHours> TradingSessions = new List<ExchangeTradingSessionHours>()
         {
             new ExchangeTradingSessionHours(TradingSessionType.MarketClosed, TimeSpan.Parse("00:00:00"), TimeSpan.Parse("7:00:00")),
             new ExchangeTradingSessionHours(TradingSessionType.OpenAuction, TimeSpan.Parse("7:00:00"), TimeSpan.Parse("8:00:00")),
-            new ExchangeTradingSessionHours(TradingSessionType.ContinuesTrading, TimeSpan.Parse("8:00:00"), TimeSpan.Parse("16:30:00")),
+            new ExchangeTradingSessionHours(TradingSessionType.ContinuesTrading, TimeSpan.Parse("8:00:00"), TimeSpan.Parse("12:00:00")),
+            new ExchangeTradingSessionHours(TradingSessionType.IntradayAuction, TimeSpan.Parse("12:00:00"), TimeSpan.Parse("12:05:00")),
+            new ExchangeTradingSessionHours(TradingSessionType.ContinuesTrading, TimeSpan.Parse("12:05:00"), TimeSpan.Parse("16:30:00")),
             new ExchangeTradingSessionHours(TradingSessionType.IntradayAuction, TimeSpan.Parse("16:30:00"), TimeSpan.Parse("16:35:00")),
             new ExchangeTradingSessionHours(TradingSessionType.MarketClosed, TimeSpan.Parse("16:35:00"), TimeSpan.Parse("24:00:00")),
         };
+
+        //public static IEnumerable<ExchangeTradingSessionHours> TradingSessions = new List<ExchangeTradingSessionHours>()
+        //{
+        //    new ExchangeTradingSessionHours(TradingSessionType.MarketClosed, TimeSpan.Parse("00:00:00"), TimeSpan.Parse("7:00:00")),
+        //    new ExchangeTradingSessionHours(TradingSessionType.OpenAuction, TimeSpan.Parse("7:00:00"), TimeSpan.Parse("8:00:00")),
+        //    new ExchangeTradingSessionHours(TradingSessionType.ContinuesTrading, TimeSpan.Parse("8:00:00"), TimeSpan.Parse("16:30:00")),
+        //    new ExchangeTradingSessionHours(TradingSessionType.IntradayAuction, TimeSpan.Parse("16:30:00"), TimeSpan.Parse("16:35:00")),
+        //    new ExchangeTradingSessionHours(TradingSessionType.MarketClosed, TimeSpan.Parse("16:35:00"), TimeSpan.Parse("24:00:00")),
+        //};
     }
 
     public class ExchangeTradingSessionHours

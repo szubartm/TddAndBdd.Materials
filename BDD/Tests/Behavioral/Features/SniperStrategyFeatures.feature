@@ -47,7 +47,7 @@ Scenario: Child order should not be sent if market data unfavorable
 	When new market data is received AZN.L: 1000@118 - 200@120
 	Then child order should not be sent
 
-Scenario: Fun
+Scenario: Child orders should be sent until order fully filled when favourable market data
 	Given new order is received
 	And order is accepted
 	When new market data is received AZN.L: 1000@8 - 200@9

@@ -143,26 +143,26 @@ this.ScenarioInitialize(scenarioInfo);
 #line 10
  testRunner.Given("it is 8:00", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                             "Field",
                             "Value"});
-                table10.AddRow(new string[] {
+                table2.AddRow(new string[] {
                             "Symbol",
                             "AZN.L"});
-                table10.AddRow(new string[] {
+                table2.AddRow(new string[] {
                             "Side",
                             "Buy"});
-                table10.AddRow(new string[] {
+                table2.AddRow(new string[] {
                             "Price",
                             "100"});
-                table10.AddRow(new string[] {
+                table2.AddRow(new string[] {
                             "Quantity",
                             "100000"});
-                table10.AddRow(new string[] {
+                table2.AddRow(new string[] {
                             "StrategyType",
                             "Sniper"});
 #line 11
- testRunner.When("new order is received with params", ((string)(null)), table10, "When ");
+ testRunner.When("new order is received with params", ((string)(null)), table2, "When ");
 #line hidden
 #line 18
  testRunner.Then("order is rejected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -201,26 +201,26 @@ this.ScenarioInitialize(scenarioInfo);
 #line 21
  testRunner.Given("it is 8:00", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                             "Field",
                             "Value"});
-                table11.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "Symbol",
                             "AZN.L"});
-                table11.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "Side",
                             "Buy"});
-                table11.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "Price",
                             "1"});
-                table11.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "Quantity",
                             "1000"});
-                table11.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "StrategyType",
                             "Sniper"});
 #line 22
- testRunner.When("new order is received with params", ((string)(null)), table11, "When ");
+ testRunner.When("new order is received with params", ((string)(null)), table3, "When ");
 #line hidden
 #line 29
  testRunner.Then("order is rejected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -356,79 +356,6 @@ this.ScenarioInitialize(scenarioInfo);
 #line hidden
 #line 48
  testRunner.Then("child order should not be sent", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Fun")]
-        public virtual void Fun()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Fun", null, tagsOfScenario, argumentsOfScenario);
-#line 50
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            bool isScenarioIgnored = default(bool);
-            bool isFeatureIgnored = default(bool);
-            if ((tagsOfScenario != null))
-            {
-                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((this._featureTags != null))
-            {
-                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((isScenarioIgnored || isFeatureIgnored))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 51
- testRunner.Given("new order is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 52
- testRunner.And("order is accepted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 53
- testRunner.When("new market data is received AZN.L: 1000@8 - 200@9", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 54
- testRunner.Then("child order was sent", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-#line 55
- testRunner.And("child order is filled with 100 shares", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 56
- testRunner.And("Store child orders", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 57
- testRunner.When("child order is rejected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 58
- testRunner.Then("child order should not be sent", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-#line 59
- testRunner.When("new market data is received AZN.L: 1000@118 - 200@120", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 60
- testRunner.Then("child order should not be sent", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-#line 61
- testRunner.When("new market data is received AZN.L: 1000@8 - 200@9", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 62
- testRunner.Then("child order was sent", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-#line 63
- testRunner.When("child order is fully filled", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 64
- testRunner.Then("order is in filled state", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

@@ -34,4 +34,12 @@ namespace Common
         Acknowledge,
         Fill
     }
+      public enum TimeType
+    {
+        Beginning,
+        Middle,
+        End
+    }
+
+    
 }

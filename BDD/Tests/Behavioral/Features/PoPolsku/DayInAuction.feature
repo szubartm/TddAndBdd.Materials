@@ -4,12 +4,12 @@
 Właściwość: DayInAuction Po polsku
 
 Scenariusz: Prosty Scenariusz
-Zakładając że jest 8:00
+Zakładając że jest OpenAuction/Beginning
 Jeżeli nowe zlecenie zostało otrzymane
 Wtedy zlecenie zostało zaakceptowane
 
 Scenariusz: Inny scenariusz
-Zakładając że jest 8:00
+Zakładając że jest OpenAuction/Beginning
 Jeżeli nowe zlecenie zostało otrzymane z parametrami
 | Field        | Value |
 | Symbol       | AZN.L |

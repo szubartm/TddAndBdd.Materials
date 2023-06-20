@@ -101,7 +101,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 7
-testRunner.Given("że jest 8:00", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Zakładając ");
+testRunner.Given("że jest OpenAuction/Beginning", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Zakładając ");
 #line hidden
 #line 8
 testRunner.When("nowe zlecenie zostało otrzymane", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Jeżeli ");
@@ -141,28 +141,28 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 12
-testRunner.Given("że jest 8:00", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Zakładając ");
+testRunner.Given("że jest OpenAuction/Beginning", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Zakładając ");
 #line hidden
-                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                             "Field",
                             "Value"});
-                table1.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "Symbol",
                             "AZN.L"});
-                table1.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "Side",
                             "Buy"});
-                table1.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "Price",
                             "100"});
-                table1.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "Quantity",
                             "1000"});
-                table1.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "StrategyType",
                             "Day"});
 #line 13
-testRunner.When("nowe zlecenie zostało otrzymane z parametrami", ((string)(null)), table1, "Jeżeli ");
+testRunner.When("nowe zlecenie zostało otrzymane z parametrami", ((string)(null)), table3, "Jeżeli ");
 #line hidden
 #line 20
 testRunner.Then("zlecenie zostało zaakceptowane", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Wtedy ");

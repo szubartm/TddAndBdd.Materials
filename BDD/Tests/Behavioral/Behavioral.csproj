@@ -28,6 +28,7 @@
     <ProjectReference Include="..\..\Common\Common.csproj" />
     <ProjectReference Include="..\..\OrderManagementSystem\OrderManagementSystem.csproj" />
     <ProjectReference Include="..\..\TradingSystemWebApiContract\TradingSystemWebApiContract.csproj" />
+    <ProjectReference Include="..\..\TradingSystem\TradingSystem.csproj" />
   </ItemGroup>
 
   <ItemGroup>

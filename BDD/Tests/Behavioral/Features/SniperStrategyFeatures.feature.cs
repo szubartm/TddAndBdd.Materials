@@ -101,7 +101,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 5
- testRunner.Given("it is 8:00", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("it is OpenAuction/Beginning", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 6
  testRunner.When("new order is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -141,28 +141,28 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 10
- testRunner.Given("it is 8:00", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("it is OpenAuction/Beginning", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                             "Field",
                             "Value"});
-                table2.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "Symbol",
                             "AZN.L"});
-                table2.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "Side",
                             "Buy"});
-                table2.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "Price",
                             "100"});
-                table2.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "Quantity",
                             "100000"});
-                table2.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "StrategyType",
                             "Sniper"});
 #line 11
- testRunner.When("new order is received with params", ((string)(null)), table2, "When ");
+ testRunner.When("new order is received with params", ((string)(null)), table4, "When ");
 #line hidden
 #line 18
  testRunner.Then("order is rejected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -199,28 +199,28 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 21
- testRunner.Given("it is 8:00", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("it is OpenAuction/Beginning", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
                             "Field",
                             "Value"});
-                table3.AddRow(new string[] {
+                table5.AddRow(new string[] {
                             "Symbol",
                             "AZN.L"});
-                table3.AddRow(new string[] {
+                table5.AddRow(new string[] {
                             "Side",
                             "Buy"});
-                table3.AddRow(new string[] {
+                table5.AddRow(new string[] {
                             "Price",
                             "1"});
-                table3.AddRow(new string[] {
+                table5.AddRow(new string[] {
                             "Quantity",
                             "1000"});
-                table3.AddRow(new string[] {
+                table5.AddRow(new string[] {
                             "StrategyType",
                             "Sniper"});
 #line 22
- testRunner.When("new order is received with params", ((string)(null)), table3, "When ");
+ testRunner.When("new order is received with params", ((string)(null)), table5, "When ");
 #line hidden
 #line 29
  testRunner.Then("order is rejected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -300,7 +300,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 38
- testRunner.Given("it is 8:00", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("it is OpenAuction/Beginning", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 39
  testRunner.When("new order is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -343,7 +343,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 44
- testRunner.Given("it is 8:00", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("it is OpenAuction/Beginning", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 45
  testRunner.And("new order is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
